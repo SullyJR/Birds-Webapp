@@ -1,0 +1,321 @@
+/*
+Colour palette
+primary colour: #DAD7CD
+secondary colour: #3A5A40
+tertiary colour: #588157
+
+
+* {
+    outline: dashed orangered;
+}
+*/
+
+html {
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+body {
+    position: static;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 0.7fr 10fr 0.6fr;
+    min-height: 100vh;
+    max-height: 100vh;
+    grid-gap: 0;
+    margin: 0;
+    padding: 0;
+    background-color: #A3B18A;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #A3B18A;
+    position: static;
+    grid-column: span 2;
+    align-self: center;
+    
+    z-index: 2;
+    padding: 1vh;
+    margin-left: -1vh;
+    margin-right: -1vh;
+
+}
+
+.logo {
+    width: 3em;
+    height: 3em;
+    fill: #3A5A40;
+    vertical-align: middle;
+}
+
+main {
+    overflow-y: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 3vh;
+    flex-wrap: wrap;
+    background-image: url("./background.jpg");
+    margin-right: -1vh;
+    box-shadow: inset 0vh 0vh 1.5vh 0.3vh #002105;
+    position: relative;
+}
+
+.bird-profile {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    background-color: #DAD7CD;
+    border-radius: 1vh;
+    box-shadow: 0.5vh 0.5vh 0.5vh rgba(0, 0, 0, 0.2);
+    height: 30em;
+    width: 25em;
+    margin: 1vh;
+}
+
+.bird-profile img {
+    width: 100%;
+    height: 55%;
+    object-fit: cover;
+    border-radius: 0.5vh;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+
+aside {
+    position: static;
+    background-color: #DAD7CD;
+    z-index: 5;
+    
+}
+
+
+
+footer {
+    position: static;
+    grid-column: span 2;
+    background-color: #A3B18A;
+    text-align: center;
+    z-index: 2;
+    vertical-align: middle;
+}
+
+#footer-text {
+    margin: 1em;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 2em;
+    color: #588157;
+}
+
+h1 {
+    text-align: center;
+    margin: 1vh;
+    color: #3A5A40;
+    font-size: 3em;
+}
+
+.filter {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    margin: 1vh;
+}
+
+.box, form{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vh;
+}
+
+#sort-by {
+    height: 4vh;
+    box-sizing: border-box;
+    border-radius: 0.5vh;
+}
+
+#search-bar {
+    height: 4vh;
+    box-sizing: border-box;
+    border-radius: 0.5vh;
+    margin-bottom: 0%;
+}
+
+#conservation-status {
+    height: 4vh;
+    box-sizing: border-box;
+    border-radius: 0.5vh;
+}
+
+#filter-results {
+    width: 100%;
+    height: 4vh;
+    box-sizing: border-box;
+    border-radius: 0.5vh;
+    margin-top: 0%;
+}
+
+label {
+    font-size: small;
+    color: #588157;
+    font-weight: bold;
+} 
+
+.line {
+    height: 0.2vh;
+    margin: 0;
+    background-color: #588157;
+}
+
+.circle {
+    display: inline-block;
+    height: 2.5vh;
+    width: 2.5vh;
+    border-radius: 50%;
+    margin: 0.5vh;
+    vertical-align: middle;
+}
+
+.conservation-list {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    list-style: none;
+    font-size: medium;
+    padding: 0;
+    margin: 1em;
+    color: #3A5A40;
+    align-items: flex-start;
+}
+
+li:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+h2 {
+    margin: auto;
+    color: #3A5A40;
+    text-align: center;
+    padding-bottom: 1vh;
+    font-size: 1.5em;
+}
+
+.filterbirds {
+    margin-top: 1vh;
+    margin-bottom: -2vh;
+}
+
+
+.not-threatened {
+    background-color: #02a028;
+}
+
+.naturally-uncommon {
+    background-color: #649a31;
+}
+
+.relict {
+    background-color: #99cb68;
+}
+
+.recovering {
+    background-color: #fecc33;
+}
+
+.declining {
+    background-color: #fe9a01;
+}
+
+.nationally-increasing {
+    background-color: #c26967;
+}
+
+.nationally-vulnerable {
+    background-color: #9b0000;
+}
+
+.nationally-endangered {
+    background-color: #660032;
+}
+
+.nationally-critical {
+    background-color: #320033;
+}
+
+.extinct {
+    background-color: black;
+}
+
+.data-deficient {
+    background-color: black;
+}
+
+select, input {
+    background-color: #A3B18A;
+    border: none;
+    border-radius: 0.5vh;
+    padding: 0.5vh;
+    font-size: medium;
+    color: #DAD7CD;
+    cursor: pointer;
+
+}
+
+#filter-results {
+    background-color: #3A5A40;
+    border: none;
+    border-radius: 0.5vh;
+    padding: 0.5vh;
+    font-size: small;
+    color: #DAD7CD;
+    cursor: pointer;
+    font-size: medium;
+
+}
+
+input::placeholder {
+    color: #DAD7CD;
+}
+
+
+
+/*
+.box {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    margin: 1vh;
+    flex: 1;
+    width: 100%;
+    background-color: orange;
+}
+
+.box label {
+    margin: 2vh; 
+    
+}
+
+
+
+.search-form {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    margin: 5vh;
+    background-color: orchid;
+    flex: 1;
+}
+*/
+
+
+

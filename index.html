@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>NZ Bird Data</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <header>
+        <img src="birdLogo.png" alt="Logo" class="logo">
+        <h1>Birds of Aotearoa </h1>
+    </header>
+    <aside class="aside">
+        <div class="filter">
+            <h2 class="filterbirds">Filter Birds</h2>
+            <form class="search form">
+                <label for="search-bar">Search</label>
+                <input type="text" id="search-bar" placeholder=" Search...">
+            </form>
+            <div class="conservation status box">
+                <label for="conservation-status">Conservation Status</label>
+                <select name="conservation-status input" id="conservation-status">
+                    <option value="all">All</option>
+                    <option value="not-threatened">Not Threatened</option>
+                    <option value="naturally-uncommon">Naturally Uncommon</option>
+                    <option value="relict">Relict</option>
+                    <option value="recovering">Recovering</option>
+                    <option value="declining">Declining</option>
+                    <option value="nationally-increasing">Nationally Increasing</option>
+                    <option value="nationally-vulnerable">Nationally Vulnerable</option>
+                    <option value="nationally-endangered">Nationally Endangered</option>
+                    <option value="nationally-critical">Nationally Critical</option>
+                    <option value="extinct">Extinct</option>
+                    <option value="data-deficient">Data Deficient</option>
+                </select>
+            </div>
+            <div class="sort by box">
+                <label for="sort-by">Sort By</label>
+                <select name="sort-by" id="sort-by">
+                    <option value="az">Alphabetical (A-Z)</option>
+                    <option value="za">Alphabetical (Z-A)</option>
+                    <option value="lightest">Lightest to Heaviest</option>
+                    <option value="heaviest">Heaviest to Lightest</option>
+                </select>
+            </div>
+            <div>
+                <button id="filter-results">Filter Results</button>
+            </div>
+            <div class="line"></div>
+            <div class="endangered">
+                <h2>Conservation Status</h2>
+                <ul class="conservation-list">
+                    <li>
+                        <span class="circle not-threatened"></span>
+                        Not Threatened
+                    </li>
+                    <li>
+                        <span class="circle naturally-uncommon"></span>
+                        Naturally Uncommon
+                    </li>
+                    <li>
+                        <span class="circle relict"></span>
+                        Relict
+                    </li>
+                    <li>
+                        <span class="circle recovering"></span>
+                        Recovering
+                    </li>
+                    <li>
+                        <span class="circle declining"></span>
+                        Declining
+                    </li>
+                    <li>
+                        <span class="circle nationally-increasing"></span>
+                        Nationally Increasing
+                    </li>
+                    <li>
+                        <span class="circle nationally-vulnerable"></span>
+                        Nationally Vulnerable
+                    </li>
+                    <li>
+                        <span class="circle nationally-endangered"></span>
+                        Nationally Endangered
+                    </li>
+                    <li>
+                        <span class="circle nationally-critical"></span>
+                        Nationally Critical
+                    </li>
+                    <li>
+                        <span class="circle extinct"></span>
+                        Extinct
+                    </li>
+                    <li>
+                        <span class="circle data-deficient"></span>
+                        Data Deficient
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+    <main id="main">
+    </main>
+    <footer>
+        <p id="footer-text">Data licensed from <a href="https://www.birdsnz.org.nz/">Birds New Zealand</a> for educational use within the University of Otago</p>
+    </footer>
+</body>
+
+</html>
