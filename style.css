@@ -18,7 +18,7 @@ body {
     position: static;
     display: grid;
     grid-template-columns: 1fr 3fr;
-    grid-template-rows: 0.7fr 10fr 0.6fr;
+    grid-template-rows: 0.7fr 10fr 0.5fr;
     min-height: 100vh;
     max-height: 100vh;
     grid-gap: 0;
@@ -37,7 +37,8 @@ header {
     align-self: center;
     
     z-index: 2;
-    padding: 1vh;
+    padding: auto;
+    margin: auto;
     margin-left: -1vh;
     margin-right: -1vh;
 
@@ -63,26 +64,70 @@ main {
     position: relative;
 }
 
+
+
 .bird-profile {
     display: flex;
     flex-direction: column;
-    gap: 0;
-    background-color: #DAD7CD;
+    background-color: none;
     border-radius: 1vh;
-    box-shadow: 0.5vh 0.5vh 0.5vh rgba(0, 0, 0, 0.2);
-    height: 30em;
-    width: 25em;
-    margin: 1vh;
+    box-shadow: 0.5vh 0.5vh 01.7vh 0.2vh #002105;
+    height: 20em;
+    width: 30em;
+    margin: 2em;
 }
 
+.bird-name {
+    font-size: 1.5em;
+    color: #DAD7CD;
+    text-align: left;
+    margin-top: -3em;
+    margin-left: 1em;
+}
+
+
+
+.back-side {
+    transform: rotateY(180deg);
+    background-color: #DAD7CD;
+    color: #000; /* Customize the text color */
+    border-radius: 0.5vh;
+    height: 20em;
+    width: 30em;
+    margin-top: -20em;
+  }
+
+.front-side, .back-side {
+    backface-visibility: hidden;
+    transition: transform 0.6s ease-in-out;
+}
+
+/* Add Animation for Flip */
+.bird-profile:hover .front-side {
+    transform: rotateY(180deg);
+
+  }
+  
+  .bird-profile:hover .back-side {
+    transform: rotateY(0deg);
+}
+
+.front-side {
+    object-fit: cover;
+    border-radius: 0.5vh;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+ 
 .bird-profile img {
     width: 100%;
-    height: 55%;
+    height: 100%;
     object-fit: cover;
     border-radius: 0.5vh;
     margin: 0;
     padding: 0;
-    display: inline-block;
 }
 
 
@@ -102,10 +147,12 @@ footer {
     text-align: center;
     z-index: 2;
     vertical-align: middle;
+    padding: auto;
+    margin: auto;
 }
 
 #footer-text {
-    margin: 1em;
+    margin-bottom: 0;
 }
 
 p {
@@ -113,6 +160,7 @@ p {
     margin-bottom: 0;
     margin-left: 2em;
     color: #588157;
+    padding: 0;
 }
 
 h1 {
@@ -197,8 +245,12 @@ label {
 
 li:hover {
     transform: scale(1.2);
-    transition: transform 0.3s;
+    transition: transform 0.4s ease;
     cursor: pointer;
+}
+
+li {
+    transition: transform 0.4s ease;
 }
 
 h2 {
@@ -259,6 +311,16 @@ h2 {
     background-color: black;
 }
 
+.conserve-link {
+        text-decoration: none;
+        color: inherit;
+}
+
+.conserve-link:visited {
+        text-decoration: none;
+        color: inherit;
+}
+
 select, input {
     background-color: #A3B18A;
     border: none;
@@ -284,6 +346,10 @@ select, input {
 
 input::placeholder {
     color: #DAD7CD;
+}
+
+.is-hidden { 
+    display: none; 
 }
 
 
